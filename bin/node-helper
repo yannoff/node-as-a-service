@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cmd=$(basename $0)
+
+args=
+while [ $# -gt 0 ]
+do
+    args="${args}%20$1"
+    shift 1
+done
+
+curl http://service.node:5000/${cmd}${args} 2>/dev/null

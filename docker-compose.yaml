@@ -1,0 +1,31 @@
+version: '3.6'
+services:
+    php:
+        image: yannoff/php-fpm:7.3-fpm-alpine
+        volumes:
+            - ./:/src
+            # The node-helper script is used as a proxy for the node API
+            - ./bin/node-helper:/usr/bin/node-helper
+            # For assetic support
+            - tempdata:/tmp
+        working_dir: /src
+
+    node:
+        image: yannoff/node-api:12
+        entrypoint: node
+        command: /app/server.js
+        volumes:
+            - ./:/src
+            # For yannoff/node-api development only
+            - ./docker/server.js:/app/server.js
+            - ./docker/config.json:/app/config.json
+            # For assetic support
+            - tempdata:/tmp
+        ports:
+            - 5000:5000
+        working_dir: /src
+        networks:
+            default:
+                aliases:
+                    - service.node
+

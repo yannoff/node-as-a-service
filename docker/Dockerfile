@@ -5,6 +5,8 @@ ARG PORT=5000
 ARG LESS_VERSION
 ARG NPM_PACKAGES="uglifycss uglify-es less-loader url-loader file-loader webpack"
 
+ENV NODE_PATH /usr/local/lib/node_modules
+
 VOLUME [ "/app", "/src" ]
 
 RUN \

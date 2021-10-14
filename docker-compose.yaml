@@ -5,7 +5,10 @@ services:
         volumes:
             - ./:/src
             # The node-helper script is used as a proxy for the node API
-            - ./bin/node-helper:/usr/bin/node-helper
+            # Hence, this is a multi-call script for node, npm & yarn
+            - ./bin/node-helper:/usr/bin/node
+            - ./bin/node-helper:/usr/bin/yarn
+            - ./bin/node-helper:/usr/bin/npm
             # For assetic support
             - tempdata:/tmp
         working_dir: /src

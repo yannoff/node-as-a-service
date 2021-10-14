@@ -9,4 +9,5 @@ do
     shift 1
 done
 
+# Assuming the node service is network aliased as "service.node"
 curl http://service.node:5000/${cmd}${args} 2>/dev/null

@@ -4,6 +4,17 @@ A docker service to expose node/npm/yarn commands over http
 
 **Github Repository: https://github.com/yannoff/node-as-a-service/**
 
+## Available tags
+
+- `10` built on top of [`node:10-alpine`](https://github.com/nodejs/docker-node/blob/1f75c5f063aa31b8193a476f3ad49569a10f3dd3/10/alpine3.10/Dockerfile)
+- `12` built on top of [`node:12-alpine`](https://github.com/nodejs/docker-node/blob/a70c43d47528213ef0cd58af7c35edf4c1d3e990/12/alpine3.14/Dockerfile)
+- `14` built on top of [`node:14-alpine`](https://github.com/nodejs/docker-node/blob/a70c43d47528213ef0cd58af7c35edf4c1d3e990/14/alpine3.14/Dockerfile)
+- `15` built on top of [`node:15-alpine`](https://github.com/nodejs/docker-node/blob/cdd626c9e138b670318c56a39a5c86b0f5bb271b/15/alpine3.13/Dockerfile)
+- `16` built on top of [`node:16-alpine`](https://github.com/nodejs/docker-node/blob/a70c43d47528213ef0cd58af7c35edf4c1d3e990/16/alpine3.14/Dockerfile)
+- `18` built on top of [`node:18-alpine`](https://github.com/nodejs/docker-node/blob/6c20762ebfb6ab35c874c4fe540a55ab8fd6c49d/18/alpine3.18/Dockerfile)
+- `20` built on top of [`node:20-alpine`](https://github.com/nodejs/docker-node/blob/62c2e3cfb17ba8d9167b0daebbff9ea5ecaef6e4/20/alpine3.18/Dockerfile)
+- `21` built on top of [`node:21-alpine`](https://github.com/nodejs/docker-node/blob/62c2e3cfb17ba8d9167b0daebbff9ea5ecaef6e4/21/alpine3.18/Dockerfile)
+
 ## Purpose
 
 Modern web application frameworks such as symfony,

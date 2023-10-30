@@ -15,7 +15,7 @@ build_and_push(){
 if [ $# -eq 0 ]
 then
     # If no version specified, build and push all versions
-    set -- 10 11 12 13 14 15 16
+    set -- 10 11 12 13 14 15 16 18 20 21
 fi
 
 for v in "$@"
